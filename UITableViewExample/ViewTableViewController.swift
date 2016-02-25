@@ -56,6 +56,11 @@ class ViewTableViewController: UITableViewController {
         cell.titleLabel.text = appleProducts[indexPath.row]
         cell.applePictures.image = appleProductsImages[indexPath.row]
         
+        //Make a circle rounded image
+        //Set the corneradius = the half of the pictures size. 
+        cell.applePictures.layer.cornerRadius = 25
+        cell.applePictures.clipsToBounds = true
+        
         
         return cell
     }
