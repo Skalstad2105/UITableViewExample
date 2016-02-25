@@ -17,9 +17,10 @@ class ViewTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //Call a method to add images to AppleProductsImages array.
         addImagesToArray()
-        
+        //Call method to hide unused cells
+        hideUnusedCells()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,10 +38,12 @@ class ViewTableViewController: UITableViewController {
         appleProductsImages.append(UIImage(named: "MacBookAir.png")!)
         appleProductsImages.append(UIImage(named: "AppleWatch.png")!)
         appleProductsImages.append(UIImage(named: "AppleTV.png")!)
-        
-        
     }
-    
+    //Method to hide unused cells in tableView
+    func hideUnusedCells()
+    {
+        self.tableView.tableFooterView = UIView()
+    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -55,7 +58,6 @@ class ViewTableViewController: UITableViewController {
         
         cell.titleLabel.text = appleProducts[indexPath.row]
         cell.applePictures.image = appleProductsImages[indexPath.row]
-        
         //Make a circle rounded image
         //Set the corneradius = the half of the pictures size. 
         cell.applePictures.layer.cornerRadius = 25
