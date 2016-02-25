@@ -2,7 +2,6 @@
 //  ViewTableViewController.swift
 //  UITableViewExample
 //
-//  Created by Cato Skalstad on 25.02.2016.
 //  Copyright © 2016 Marius Skalstad. All rights reserved.
 //
 
@@ -13,8 +12,6 @@ class ViewTableViewController: UITableViewController {
     let appleProducts = ["iPhone","iPad","iMac","Macbook Pro","Macbook Air","Apple Watch","Apple TV"]
     var appleProductsImages : [UIImage] = []
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         //Call a method to add images to AppleProductsImages array.
@@ -62,7 +59,6 @@ class ViewTableViewController: UITableViewController {
         //Set the corneradius = the half of the pictures size. 
         cell.applePictures.layer.cornerRadius = 25
         cell.applePictures.clipsToBounds = true
-        
         
         return cell
     }

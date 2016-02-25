@@ -2,7 +2,6 @@
 //  TableViewCell.swift
 //  UITableViewExample
 //
-//  Created by Cato Skalstad on 25.02.2016.
 //  Copyright © 2016 Marius Skalstad. All rights reserved.
 //
 
